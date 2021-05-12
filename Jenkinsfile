@@ -76,7 +76,7 @@ pipeline {
 	         // Deploy to Production Step
 	        stage('Deploy to Production') {
 	            steps {
-	                echo "Deploying ${BRANCH_NAME} to PROD "
+	                echo 'Deploying to PROD '
 	                UiPathDeploy (
 	                packagePath: "Output\\${env.BUILD_NUMBER}",
 	                orchestratorAddress: "${UIPATH_ORCH_URL}",
