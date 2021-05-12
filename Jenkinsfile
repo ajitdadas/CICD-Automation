@@ -6,7 +6,8 @@ pipeline {
 	        UIPATH_ORCH_URL = "https://cloud.uipath.com/"
 	        UIPATH_ORCH_LOGICAL_NAME = "manoj_vermaa"
 	        UIPATH_ORCH_TENANT_NAME = "manoj_vermaa"
-	        UIPATH_ORCH_FOLDER_NAME = "Default"
+	        UIPATH_ORCH_FOLDER_NAME_UAT = "UAT"
+	        UIPATH_ORCH_FOLDER_NAME_PROD = "PROD"
 	    }
 	
 
@@ -47,7 +48,7 @@ pipeline {
 	                	packagePath: "Output\\${env.BUILD_NUMBER}",
 	                	orchestratorAddress: "${UIPATH_ORCH_URL}",
 	                	orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
-	                	folderName: "${UIPATH_ORCH_FOLDER_NAME}",
+	                	folderName: "${UIPATH_ORCH_FOLDER_NAME_UAT}",
 	                	environments: 'PROD',
 	                	credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: '8DEv1AMNXczW3y4U15LL3jYf62jK93n5'), 
 	        		)
@@ -61,7 +62,7 @@ pipeline {
 	                	packagePath: "Output\\${env.BUILD_NUMBER}",
 	                	orchestratorAddress: "${UIPATH_ORCH_URL}",
 	                	orchestratorTenant: "${UIPATH_ORCH_TENANT_NAME}",
-	                	folderName: "${UIPATH_ORCH_FOLDER_NAME}",
+	                	folderName: "${UIPATH_ORCH_FOLDER_NAME_PROD}",
 	                	environments: 'PROD',
 	                	credentials: Token(accountName: "${UIPATH_ORCH_LOGICAL_NAME}", credentialsId: '8DEv1AMNXczW3y4U15LL3jYf62jK93n5'), 
 	        		)
