@@ -6,8 +6,8 @@ pipeline {
 	        UIPATH_ORCH_URL = "https://cloud.uipath.com/"
 	        UIPATH_ORCH_LOGICAL_NAME = "manoj_vermaa"
 	        UIPATH_ORCH_TENANT_NAME = "manoj_vermaa"
-	        UIPATH_ORCH_FOLDER_NAME_UAT = "UAT"
-	        UIPATH_ORCH_FOLDER_NAME_PROD = "PROD"
+	        UIPATH_ORCH_FOLDER_NAME_UAT = "default_uat"
+	        UIPATH_ORCH_FOLDER_NAME_PROD = "default_prod"
 	    }
 	
 
